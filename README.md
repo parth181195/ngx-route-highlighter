@@ -40,6 +40,3 @@ it will match link in example.
 ## Build
 
 Run `ng build ngx-route-highlighter` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-
-http://localhost:4200/test-1/*/linkpart/*
