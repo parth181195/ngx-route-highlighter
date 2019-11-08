@@ -11,6 +11,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: install angular
       run: | 
-        npm install -g @angular/cli
         cd ngx-route-highlighter
+        sudo npm install -g @angular/cli
         npm i
