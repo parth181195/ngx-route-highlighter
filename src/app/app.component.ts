@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgxRouteHighlighterConfig } from 'ngx-route-highlighter';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'route-highlighter';
+  ngxRouteHoghlighter = new NgxRouteHighlighterConfig();
 }

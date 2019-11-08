@@ -119,6 +119,41 @@
           }
         }
       }
+    },
+    "ngx-route-highlighter": {
+      "projectType": "library",
+      "root": "projects/ngx-route-highlighter",
+      "sourceRoot": "projects/ngx-route-highlighter/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-route-highlighter/tsconfig.lib.json",
+            "project": "projects/ngx-route-highlighter/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-route-highlighter/src/test.ts",
+            "tsConfig": "projects/ngx-route-highlighter/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-route-highlighter/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-route-highlighter/tsconfig.lib.json",
+              "projects/ngx-route-highlighter/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "route-highlighter"
 }
