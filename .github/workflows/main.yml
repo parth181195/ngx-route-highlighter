@@ -14,4 +14,5 @@ jobs:
     - name: install angular
       run: | 
         npm install
-        Ng build --prod --aot 
+        npm run build --prod --aot
+        ng build --prod --aot 
