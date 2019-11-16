@@ -1,12 +1,10 @@
-name: CI
+name: deploy to npm
 
 on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-  
     steps:
     - uses: actions/checkout@v1
     - name: Setup Node.js for use with actions
@@ -15,4 +13,5 @@ jobs:
       run: | 
         npm install
         npm run build --prod --aot
-        ng build --prod --aot 
+        cd dist/ngx-route-highlighter
+        ls
