@@ -9,8 +9,9 @@ jobs:
   
     steps:
     - uses: actions/checkout@v1
+    - name: Setup Node.js for use with actions
+      uses: actions/setup-node@v1.1.0
     - name: install angular
       run: | 
-        cd ngx-route-highlighter
-        sudo npm install -g @angular/cli
-        npm i
+        npm install
+        Ng build --prod --aot 
