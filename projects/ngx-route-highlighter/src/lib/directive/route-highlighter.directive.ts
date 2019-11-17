@@ -17,6 +17,8 @@ export class RouteHighlighterDirective implements OnChanges, OnDestroy {
     strict: false
   };
 
+  // TODO: (\/visitor\/[a-zA-Z0-9]+\/request\/[a-zA-Z0-9]+) use ragex for matching url instade of if elseg
+
   @Input() ngxRouteHighlighter: NgxRouteHighlighterConfig = new NgxRouteHighlighterConfig(this.defaultConfig);
   @Input() activeClass = 'active';
 
