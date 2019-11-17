@@ -45,21 +45,21 @@ export class RouteHighlighterDirective implements OnChanges, OnDestroy {
 
 
   setClass() {
-    if (this.ngxRouteHighlighter instanceof NgxRouteHighlighterConfig) {
-      if (isArray(this.ngxRouteHighlighter.config.links) && this.ngxRouteHighlighter.config.links !== null) {
+    // if (this.ngxRouteHighlighter instanceof NgxRouteHighlighterConfig) {
+      if (this.ngxRouteHighlighter.config.links && this.ngxRouteHighlighter.config.links !== null) {
         if (this.linkMatcher(this.ngxRouteHighlighter.config.links, this.ngxRouteHighlighter.config.strict)) {
           this.r2.addClass(this.el.nativeElement, this.activeClass);
         } else {
-
           // this.r2.removeClass(this.el.nativeElement, this.activeClass);
         }
       } else {
         throw Error('ngx Route Highlighter Directive needs links as <array> of <String> where provided data is of TYPE => ' + typeof (this.ngxRouteHighlighter));
       }
-    } else {
-      throw Error('ngx Route Highlighter Directive needs <NgxRouteHighlighterConfig> where provided data is of TYPE => ' + typeof (this.ngxRouteHighlighter));
     }
-  }
+    // else {
+    //   throw Error('ngx Route Highlighter Directive needs <NgxRouteHighlighterConfig> where provided data is of TYPE => ' + typeof (this.ngxRouteHighlighter));
+    // }
+  // }
   linkMatcher(links, strict?) {
     let foundMatch = false;
     let temp = [];

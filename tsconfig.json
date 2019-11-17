@@ -19,12 +19,12 @@
       "dom"
     ],
     "paths": {
-      // "ngx-route-highlighter": [
-      //   "dist/ngx-route-highlighter"
-      // ],
-      // "ngx-route-highlighter/*": [
-      //   "dist/ngx-route-highlighter/*"
-      // ]
+      "ngx-route-highlighter": [
+        "dist/ngx-route-highlighter"
+      ],
+      "ngx-route-highlighter/*": [
+        "dist/ngx-route-highlighter/*"
+      ]
     }
   },
   "angularCompilerOptions": {
