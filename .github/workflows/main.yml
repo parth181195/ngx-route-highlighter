@@ -13,5 +13,6 @@ jobs:
       run: | 
         npm install
         npm run build --prod --aot
-        cd dist/ngx-route-highlighter
         ls
+        cd dist/ngx-route-highlighter
+
