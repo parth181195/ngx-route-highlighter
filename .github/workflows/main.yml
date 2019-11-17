@@ -12,7 +12,7 @@ jobs:
     - name: install angular
       run: | 
         npm install
-        npm run build --prod --aot
+        npm run build --prod --aot --projects ngx-route-highlighter
         ls
         cd dist/ngx-route-highlighter
 
